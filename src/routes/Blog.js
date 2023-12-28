@@ -1,14 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+
+import blog from "../dataset/blog";
 
 const Blog = () => {
-  const [blog, setBlog] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/blog.json")
-      .then((res) => res.json())
-      .then((blog) => setBlog(blog));
-  }, []);
-
   return (
     <div>
       <article className="blog">

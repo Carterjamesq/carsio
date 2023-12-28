@@ -1,14 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+
+import widget from "../dataset/cars";
 
 const SidebarCarsList = () => {
-  const [widget, setWidget] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/cars.json")
-      .then((res) => res.json())
-      .then((widget) => setWidget(widget));
-  }, []);
-
   return (
     <div className="carslist-widget">
       <div className="newest-cars">

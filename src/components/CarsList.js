@@ -1,5 +1,6 @@
 import React from "react";
-import { useEffect, useState } from "react";
+
+import cars from "../dataset/cars";
 
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
@@ -18,13 +19,6 @@ const CarsList = () => {
     "Price: low to high",
     "Price: high to low",
   ];
-
-  const [cars, setCars] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:3000/cars.json")
-      .then((res) => res.json())
-      .then((cars) => setCars(cars));
-  }, []);
 
   return (
     <div className="cars-list">

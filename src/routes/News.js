@@ -1,17 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+
+import article from "../dataset/news";
 
 import { FaRegEye } from "react-icons/fa";
 import { LiaCommentDots } from "react-icons/lia";
 
 const News = () => {
-  const [article, setArticle] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/news.json")
-      .then((res) => res.json())
-      .then((article) => setArticle(article));
-  }, []);
-
   function truncateHeadline(headline, words) {
     const wordsArray = headline.split(" ");
     const truncatedWords = wordsArray.slice(0, words);
