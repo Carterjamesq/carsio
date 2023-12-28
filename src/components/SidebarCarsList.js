@@ -25,7 +25,6 @@ const SidebarCarsList = () => {
               <div className="widget-card-body">
                 <button className="btn-primary">Details</button>
                 <h3>${widget.price}</h3>
-                <h4>Heading h4</h4>
               </div>
             </div>
           ))}
