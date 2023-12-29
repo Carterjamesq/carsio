@@ -2,6 +2,8 @@ import React from "react";
 
 import widget from "../dataset/cars";
 
+import { Link } from "react-router-dom";
+
 const SidebarCarsList = () => {
   return (
     <div className="carslist-widget">
@@ -17,7 +19,14 @@ const SidebarCarsList = () => {
                 <p>{widget.year}</p>
               </div>
               <div className="widget-card-body">
-                <button className="btn-primary">Details</button>
+                <Link
+                  to={`/cars/${encodeURIComponent(
+                    widget.make.toLowerCase()
+                  )}-${encodeURIComponent(widget.model.toLowerCase())}`}
+                  className="btn-primary"
+                >
+                  Details
+                </Link>
                 <h3>${widget.price}</h3>
               </div>
             </div>
@@ -35,7 +44,14 @@ const SidebarCarsList = () => {
                 <p>{widget.year}</p>
               </div>
               <div className="widget-card-body">
-                <button className="btn-primary">Details</button>
+                <Link
+                  to={`/cars/${encodeURIComponent(
+                    widget.make.toLowerCase()
+                  )}-${encodeURIComponent(widget.model.toLowerCase())}`}
+                  className="btn-primary"
+                >
+                  Details
+                </Link>
                 <h3>${widget.price}</h3>
               </div>
             </div>

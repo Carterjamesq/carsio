@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import cars from "../dataset/cars";
 
 import Dropdown from "react-dropdown";
@@ -59,7 +61,14 @@ const CarsList = () => {
                   <p>Mileage: {car.mileage}</p>
                   <p>VIN: {car.vin}</p>
                   <div className="card-footer">
-                    <button className="btn-primary">Details</button>
+                    <Link
+                      to={`/cars/${encodeURIComponent(
+                        car.make.toLowerCase()
+                      )}-${encodeURIComponent(car.model.toLowerCase())}`}
+                      className="btn-primary"
+                    >
+                      Details
+                    </Link>
                     <h3 className="price">${car.price}</h3>
                   </div>
                   <div className="sale">{car.sale}</div>

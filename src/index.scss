@@ -289,6 +289,22 @@ footer {
   }
 }
 
+// Carousel
+.react-multi-carousel-list {
+  img {
+    width: 100%;
+    height: 360px;
+    object-fit: scale-down;
+  }
+}
+
+// Car Details
+.car-details {
+  img {
+    width: 100%;
+  }
+}
+
 // News
 .news {
   display: grid;

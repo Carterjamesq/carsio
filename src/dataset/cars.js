@@ -167,7 +167,7 @@ export default [
   },
   {
     id: 12,
-    make: "Mercedes-Benz",
+    make: "Mercedes Benz",
     model: "W201",
     year: 1986,
     vin: "5J6TF1H31EL021469",
@@ -183,7 +183,7 @@ export default [
   {
     id: 13,
     make: "Chevrolet",
-    model: "G-Series G10",
+    model: "G Series G10",
     year: 1992,
     vin: "WDDHF5KB2FB893322",
     color: "Yellow",
