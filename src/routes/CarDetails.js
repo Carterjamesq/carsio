@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
-import cars from "../dataset/cars"; // Adjust the path based on your project structure
+import cars from "../dataset/cars";
 
 const CarDetails = () => {
   // Get the make and model from the route parameters

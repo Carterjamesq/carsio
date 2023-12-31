@@ -12,7 +12,7 @@ import News from "../routes/News";
 import About from "../routes/About";
 import CarDetails from "../routes/CarDetails";
 
-import { Routes, Route, Outlet } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 const Layout = () => {
   return (
