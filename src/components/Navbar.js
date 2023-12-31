@@ -20,49 +20,42 @@ const Navbar = () => {
           <img src={Logo} alt="Cars Logo" />
         </Link>
       </div>
-      <div className="menu-toogler">
-        <div className="nav-close">X</div>
-        <div className="nav-items">
-          <Link className="nav-item" to="/">
-            <BsHouse />
-            Home
-          </Link>
-          <Link className="nav-item" to="/cars">
-            <IoCarSportOutline />
-            Cars
-          </Link>
-          <Link className="nav-item" to="/about">
-            <IoPeopleOutline />
-            About
-          </Link>
-          <Link className="nav-item" to="/blog">
-            <IoBookmarksOutline />
-            Blog
-          </Link>
-          <Link className="nav-item" to="/news">
-            <GoRss />
-            News
-          </Link>
-        </div>
-        <div className="profile-sell">
-          <Link to="sell-car">
-            <PiStorefrontLight />
-            Sell car
-          </Link>
-          <Link className="px" to="for-companies">
-            <IoInformationCircleOutline />
-            For companies
-          </Link>
-          <Link className="nav-item btn-primary" to="/profile">
-            <CgProfile />
-            Profile
-          </Link>
-        </div>
+
+      <div className="nav-items">
+        <Link className="nav-item" to="/">
+          <BsHouse />
+          Home
+        </Link>
+        <Link className="nav-item" to="/cars">
+          <IoCarSportOutline />
+          Cars
+        </Link>
+        <Link className="nav-item" to="/about">
+          <IoPeopleOutline />
+          About
+        </Link>
+        <Link className="nav-item" to="/blog">
+          <IoBookmarksOutline />
+          Blog
+        </Link>
+        <Link className="nav-item" to="/news">
+          <GoRss />
+          News
+        </Link>
       </div>
-      <div className="humburger">
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
+      <div className="profile-sell">
+        <Link to="sell-car">
+          <PiStorefrontLight />
+          Sell car
+        </Link>
+        <Link className="px" to="for-companies">
+          <IoInformationCircleOutline />
+          For companies
+        </Link>
+        <Link className="nav-item btn-primary" to="/profile">
+          <CgProfile />
+          Profile
+        </Link>
       </div>
     </nav>
   );

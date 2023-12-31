@@ -58,7 +58,6 @@ a {
   align-items: center;
   margin-bottom: 2rem;
   padding: 0 4rem;
-  position: relative;
 
   .brand {
     img {
@@ -66,53 +65,34 @@ a {
       height: 30px;
     }
   }
-  .nav-close {
-    display: none;
-  }
 
-  .humburger {
-    display: none;
-    cursor: pointer;
-    .line {
-      width: 32px;
-      height: 1px;
-      background: black;
-      margin-bottom: 0.5rem;
+  .nav-items {
+    display: flex;
+    align-items: center;
+    .nav-item {
+      display: flex;
+      align-items: center;
+      padding: 1.5rem 1rem;
+      color: black;
+
+      &:hover {
+        background-color: green;
+        color: white;
+      }
+
+      svg {
+        margin-right: 0.5rem;
+        width: 1.2rem;
+        height: 1.2rem;
+      }
     }
   }
-  .menu-toogler {
+  .profile-sell {
     display: flex;
     align-items: center;
 
-    .nav-items {
-      display: flex;
-      align-items: center;
-      margin-right: 7rem;
-      .nav-item {
-        display: flex;
-        align-items: center;
-        padding: 1.5rem 1rem;
-        color: black;
-
-        &:hover {
-          background-color: green;
-          color: white;
-        }
-
-        svg {
-          margin-right: 0.5rem;
-          width: 1.2rem;
-          height: 1.2rem;
-        }
-      }
-    }
-    .profile-sell {
-      display: flex;
-      align-items: center;
-
-      .px {
-        margin: 0 1rem;
-      }
+    .px {
+      margin: 0 1rem;
     }
   }
 }
@@ -396,49 +376,6 @@ footer {
 }
 
 @media (max-width: 992px) {
-  .site-navigation {
-    color: white;
-    padding: 1rem;
-
-    .nav-close {
-      display: block;
-    }
-
-    .nav-items {
-      color: white;
-
-      .nav-item {
-        color: white !important;
-      }
-    }
-    .menu-toogler {
-      position: fixed;
-      height: 100%;
-      width: auto;
-      z-index: 0;
-      background: #000;
-      color: white;
-      right: 0;
-      top: 0;
-      display: none;
-      flex-direction: column;
-      align-items: start;
-      padding: 1rem;
-
-      .nav-items {
-        display: block;
-        color: white;
-      }
-    }
-    .humburger {
-      display: block !important;
-    }
-    .profile-sell {
-      flex-direction: column;
-      align-items: start !important;
-      gap: 1rem;
-    }
-  }
   .cars-list {
     display: flex;
     gap: 2rem;
