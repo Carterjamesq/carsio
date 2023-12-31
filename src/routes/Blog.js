@@ -1,10 +1,16 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 import blog from "../dataset/blog";
 
 const Blog = () => {
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Blog - Cars io</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <article className="blog">
         {blog &&
           blog.map((item) => (

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import cars from "../dataset/cars"; // Adjust the path based on your project structure
 
@@ -20,6 +21,13 @@ const CarDetails = () => {
   }
   return (
     <div className="car-details">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          {car.make} - {car.model}
+        </title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <h1>
         {car.make}-{car.model}
       </h1>

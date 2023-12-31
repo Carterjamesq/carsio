@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 import { Link } from "react-router-dom";
 
@@ -24,6 +25,11 @@ const CarsList = () => {
 
   return (
     <div className="cars-list">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Carslist - Cars io</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <SidebarCarsList />
       <div className="cars">
         <div className="header-dropdown">
