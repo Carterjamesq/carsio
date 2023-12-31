@@ -13,9 +13,6 @@ const Home = () => {
       </Helmet>
       <h1>Home page</h1>
       <Carousel />
-      <div>
-        <p>Git Push</p>
-      </div>
     </div>
   );
 };
