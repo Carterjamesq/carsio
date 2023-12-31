@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+
+import cars from "../dataset/cars";
+
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
+
 import { PiEngineBold } from "react-icons/pi";
 import { TbManualGearbox } from "react-icons/tb";
 import { IoColorFillOutline } from "react-icons/io5";
 import SidebarCarsList from "./SidebarCarsList";
-import cars from "../dataset/cars";
 
 const CarsList = () => {
   const [selectedOption, setSelectedOption] = useState("Newest");

@@ -5,6 +5,7 @@ import article from "../dataset/news";
 
 import { FaRegEye } from "react-icons/fa";
 import { LiaCommentDots } from "react-icons/lia";
+import { Link } from "react-router-dom";
 
 const News = () => {
   function truncateHeadline(headline, words) {

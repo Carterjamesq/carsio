@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 import blog from "../dataset/blog";
@@ -20,7 +21,12 @@ const Blog = () => {
                 {item.title.split(" ").slice(0, 4).join("")}
                 <span>...</span>
               </h2>
-              <button className="btn-primary">Read more</button>
+              <Link
+                to={`/blog/${encodeURIComponent(item.title)}`}
+                className="btn-primary"
+              >
+                Read more
+              </Link>
             </div>
           ))}
       </article>
