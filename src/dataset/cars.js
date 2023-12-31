@@ -300,4 +300,18 @@ export default [
     owner: "Flemming Farmiloe",
     image: "https://www.2dvornika.com.ua/public/images/cars/mazda6266w.jpg",
   },
+  {
+    id: 21,
+    make: "New Mazda",
+    model: "6289",
+    year: 2017,
+    vin: "1G6AA5RX5E0392157",
+    color: "Maroon",
+    mileage: 444753,
+    price: 22894,
+    fuel_type: "electric",
+    transmission: "manual",
+    owner: "Flemming Farmiloe",
+    image: "https://www.2dvornika.com.ua/public/images/cars/mazda6266w.jpg",
+  },
 ];
