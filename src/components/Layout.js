@@ -21,6 +21,7 @@ const Layout = () => {
   return (
     <>
       <TopNav />
+
       <Navbar />
       <main className="container">
         <Routes>
