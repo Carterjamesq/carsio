@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import Logo from "../assets/Logo.svg";
@@ -19,6 +19,27 @@ const ResNavbar = () => {
     setShowNavbar(!showNavbar);
   };
 
+  const handleLinkClick = () => {
+    setShowNavbar(false);
+  };
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      // Check if the clicked element is outside the mobile menu
+      if (showNavbar && !event.target.closest(".nav-container")) {
+        setShowNavbar(false);
+      }
+    };
+
+    // Add event listener to the document body
+    document.body.addEventListener("click", handleOutsideClick);
+
+    // Remove event listener on component unmount
+    return () => {
+      document.body.removeEventListener("click", handleOutsideClick);
+    };
+  }, [showNavbar]);
+
   return (
     <nav className="site-navigation">
       <div className="nav-container">
@@ -34,36 +55,40 @@ const ResNavbar = () => {
         </div>
         <div className={`nav-elements  ${showNavbar && "active"}`}>
           <ul className="nav-items">
-            <Link className="nav-item" to="/">
+            <Link className="nav-item" to="/" onClick={handleLinkClick}>
               <BsHouse />
               Home
             </Link>
-            <Link className="nav-item" to="/cars">
+            <Link className="nav-item" to="/cars" onClick={handleLinkClick}>
               <IoCarSportOutline />
               Cars
             </Link>
-            <Link className="nav-item" to="/about">
+            <Link className="nav-item" to="/about" onClick={handleLinkClick}>
               <IoPeopleOutline />
               About
             </Link>
-            <Link className="nav-item" to="/blog">
+            <Link className="nav-item" to="/blog" onClick={handleLinkClick}>
               <IoBookmarksOutline />
               Blog
             </Link>
-            <Link className="nav-item" to="/news">
+            <Link className="nav-item" to="/news" onClick={handleLinkClick}>
               <GoRss />
               News
             </Link>
             <div className="profile-sell">
-              <Link to="sell-car">
+              <Link to="sell-car" onClick={handleLinkClick}>
                 <PiStorefrontLight />
                 Sell car
               </Link>
-              <Link className="px" to="for-companies">
+              <Link className="px" to="for-companies" onClick={handleLinkClick}>
                 <IoInformationCircleOutline />
                 For companies
               </Link>
-              <Link className="btn-primary" to="/profile">
+              <Link
+                className="btn-primary"
+                to="/profile"
+                onClick={handleLinkClick}
+              >
                 <CgProfile />
                 Profile
               </Link>

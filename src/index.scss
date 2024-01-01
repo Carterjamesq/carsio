@@ -447,6 +447,10 @@ footer {
 @media (max-width: 992px) {
   .nav-container {
     padding: 1rem;
+
+    .profile-sell {
+      margin-left: 0;
+    }
   }
   .menu-icon {
     display: block;
@@ -456,7 +460,7 @@ footer {
   .nav-elements {
     position: absolute;
     right: 0;
-    top: 60px;
+    top: 38px;
     background-color: #ffffff;
     width: 0px;
     height: calc(100vh - 60px);
@@ -467,10 +471,12 @@ footer {
     .nav-items {
       .nav-item {
         padding: 1.5rem 8rem;
+        border-bottom: 1px solid #d4d4d4;
       }
     }
 
     .profile-sell {
+      margin-top: 3rem;
       flex-direction: column;
 
       a {
@@ -481,6 +487,7 @@ footer {
 
   .nav-elements.active {
     width: auto;
+    height: 100vh;
   }
 
   .nav-elements ul {
