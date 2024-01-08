@@ -8,7 +8,6 @@ import { IoPeopleOutline } from "react-icons/io5";
 import { IoBookmarksOutline } from "react-icons/io5";
 import { BsHouse } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
-import { GoRss } from "react-icons/go";
 import { PiStorefrontLight } from "react-icons/pi";
 import { IoInformationCircleOutline } from "react-icons/io5";
 
@@ -70,10 +69,6 @@ const ResNavbar = () => {
             <Link className="nav-item" to="/blog" onClick={handleLinkClick}>
               <IoBookmarksOutline />
               Blog
-            </Link>
-            <Link className="nav-item" to="/news" onClick={handleLinkClick}>
-              <GoRss />
-              News
             </Link>
             <div className="profile-sell">
               <Link to="sell-car" onClick={handleLinkClick}>

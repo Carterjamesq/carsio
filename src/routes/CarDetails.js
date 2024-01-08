@@ -19,6 +19,18 @@ const CarDetails = () => {
   if (!car) {
     return <div>Car not found</div>;
   }
+
+  function shuffleArray(array) {
+    // Fisher-Yates shuffle algorithm
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  // Shuffle the cars array and take the first 4 items
+  const shuffledCars = shuffleArray(cars).slice(0, 4);
   return (
     <div className="car-details">
       <Helmet>
@@ -28,24 +40,56 @@ const CarDetails = () => {
         </title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
-      <h1>
-        {car.make}-{car.model}
-      </h1>
-      <div>
+
+      <div className="car-details-content">
         <img
           src={car.image}
           alt={`${car.make} ${car.model}`}
           style={{ maxWidth: "100%" }}
         />
-        <h2>Specs:</h2>
-        <p>Year: {car.year}</p>
-        <p>Transmission: {car.transmission}</p>
-        <p>Fuel Type: {car.fuel_type}</p>
-        <p>Color: {car.color}</p>
-        <p>Mileage: {car.mileage}</p>
-        <p>VIN: {car.vin}</p>
-        <p>Price: ${car.price}</p>
-        <div>Sale: {car.sale}</div>
+        <div className="car-specs-content">
+          <h1>
+            {car.make}-{car.model}
+          </h1>
+          <h2>Specs:</h2>
+          <p>
+            Year: <b>{car.year}</b>
+          </p>
+          <p>
+            Transmission: <b>{car.transmission}</b>
+          </p>
+          <p>
+            Fuel Type: <b>{car.fuel_type}</b>
+          </p>
+          <p>
+            Color: <b>{car.color}</b>
+          </p>
+          <p>
+            Mileage: <b>{car.mileage}</b>
+          </p>
+          <p>
+            VIN: <b>{car.vin}</b>
+          </p>
+          <p>
+            Price: $<b>{car.price}</b>
+          </p>
+          <div className="button-group">
+            <button className="btn-primary">Rent A Car</button>
+            <button className="btn-primary-outline">Chat with seller</button>
+          </div>
+        </div>
+      </div>
+
+      <div className="related-cars">
+        <h2>Related Cars</h2>
+        <ul>
+          {shuffledCars.map((car) => (
+            <li key={car.id}>
+              <img src={car.image} alt={car.make} />
+              <h4>{car.make}</h4>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

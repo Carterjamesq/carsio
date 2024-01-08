@@ -11,7 +11,6 @@ import CarsList from "./CarsList";
 
 import Blog from "../routes/Blog";
 import Home from "../routes/Home";
-import News from "../routes/News";
 import About from "../routes/About";
 
 import CarDetails from "../routes/CarDetails";
@@ -31,7 +30,6 @@ const Layout = () => {
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:title" element={<BlogDetails />} />
-          <Route path="/news" element={<News />} />
           <Route path="/sell-car" element={<SellCar />} />
           <Route path="/for-companies" element={<ForCompanies />} />
           <Route path="/profile" element={<UserProfile />} />

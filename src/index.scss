@@ -24,6 +24,9 @@ a {
   color: green;
   text-decoration: none;
 }
+img {
+  max-width: 100%;
+}
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -49,6 +52,22 @@ a {
     width: 1.2rem;
     height: 1.2rem;
   }
+}
+.btn-primary-outline {
+  background-color: white;
+  border: 1px solid green !important;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  color: green;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 // Navigation
@@ -375,8 +394,32 @@ footer {
 
 // Car Details
 .car-details {
-  img {
-    width: 100%;
+  .car-details-content {
+    display: grid;
+    grid-template-columns: 2.5fr 2fr;
+    img {
+      width: 600px;
+    }
+  }
+}
+.related-cars {
+  margin: 1rem 0;
+  border: 1px solid #d5d5d5;
+  padding: 1rem;
+  border-radius: 15px;
+  ul {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(200px, 1fr)
+    ); /* see notes below */
+    grid-gap: 1rem;
+
+    img {
+      width: 240px;
+      height: 200px;
+      object-fit: contain;
+    }
   }
 }
 
@@ -508,6 +551,11 @@ footer {
 
 // Responsivness
 @media (max-width: 768px) {
+  .car-details {
+    .car-details-content {
+      display: block;
+    }
+  }
   .nav-elements ul li:not(:last-child) {
     margin-right: 30px;
   }
@@ -533,6 +581,17 @@ footer {
           width: 100%;
           height: 160px;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 464px) {
+  .related-cars {
+    ul {
+      display: block;
+      img {
+        width: 100%;
       }
     }
   }
