@@ -6,8 +6,7 @@ import Logo from "../assets/Logo.svg";
 import { IoCarSportOutline } from "react-icons/io5";
 import { IoPeopleOutline } from "react-icons/io5";
 import { BsHouse } from "react-icons/bs";
-import { CgProfile } from "react-icons/cg";
-import { PiStorefrontLight } from "react-icons/pi";
+import { IoIosAddCircle } from "react-icons/io";
 import { IoInformationCircleOutline } from "react-icons/io5";
 
 const ResNavbar = () => {
@@ -40,7 +39,7 @@ const ResNavbar = () => {
 
   return (
     <nav className="site-navigation">
-      <div className="nav-container">
+      <div className="container">
         <div className="logo">
           <Link to="/">
             <img src={Logo} alt="Cars Logo" />
@@ -66,21 +65,17 @@ const ResNavbar = () => {
               About
             </Link>
             <div className="profile-sell">
-              <Link to="sell-car" onClick={handleLinkClick}>
-                <PiStorefrontLight />
-                Sell car
-              </Link>
               <Link className="px" to="for-companies" onClick={handleLinkClick}>
                 <IoInformationCircleOutline />
                 For companies
               </Link>
               <Link
-                className="btn-primary"
-                to="/profile"
+                className="btn-primary sell-car"
+                to="/sell-car"
                 onClick={handleLinkClick}
               >
-                <CgProfile />
-                Profile
+                <IoIosAddCircle />
+                Sell Car
               </Link>
             </div>
           </ul>

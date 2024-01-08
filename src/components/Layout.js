@@ -13,6 +13,7 @@ import Home from "../routes/Home";
 import About from "../routes/About";
 
 import CarDetails from "../routes/CarDetails";
+import Favourites from "./Favourites";
 
 const Layout = () => {
   return (
@@ -27,6 +28,7 @@ const Layout = () => {
           <Route path="/cars/*" element={<CarDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="/sell-car" element={<SellCar />} />
+          <Route path="/favourites" element={<Favourites />} />
           <Route path="/for-companies" element={<ForCompanies />} />
           <Route path="/profile" element={<UserProfile />} />
         </Routes>
