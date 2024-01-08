@@ -5,7 +5,6 @@ import Logo from "../assets/Logo.svg";
 
 import { IoCarSportOutline } from "react-icons/io5";
 import { IoPeopleOutline } from "react-icons/io5";
-import { IoBookmarksOutline } from "react-icons/io5";
 import { BsHouse } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import { PiStorefrontLight } from "react-icons/pi";
@@ -65,10 +64,6 @@ const ResNavbar = () => {
             <Link className="nav-item" to="/about" onClick={handleLinkClick}>
               <IoPeopleOutline />
               About
-            </Link>
-            <Link className="nav-item" to="/blog" onClick={handleLinkClick}>
-              <IoBookmarksOutline />
-              Blog
             </Link>
             <div className="profile-sell">
               <Link to="sell-car" onClick={handleLinkClick}>
