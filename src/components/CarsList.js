@@ -13,9 +13,7 @@ const CarsList = () => {
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <SidebarCarsList />
-      <div>
-        <Cars />
-      </div>
+      <Cars />
     </div>
   );
 };

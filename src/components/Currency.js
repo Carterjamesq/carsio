@@ -31,7 +31,7 @@ const CurrencyComponent = () => {
       {currencyData.map((currency) => (
         <div className="currency" key={currency.r030}>
           <p>{currency.cc}</p>
-          <p>{currency.rate}</p>
+          <p>{parseFloat(currency.rate).toFixed(2)}</p>
         </div>
       ))}
     </div>

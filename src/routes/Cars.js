@@ -70,8 +70,8 @@ const Cars = () => {
         <select value={sortingOption} onChange={handleSortChange}>
           <option value="">Please Select Sorting</option>
           <option value="A-Z">A-Z</option>
-          <option value="Newest">Newest</option>
-          <option value="Oldest">Oldest</option>
+          <option value="Newest">From New to Old</option>
+          <option value="Oldest">From Old to New</option>
           <option value="PriceHighToLow">Price High to Low</option>
           <option value="PriceLowToHigh">Price Low to High</option>
         </select>
@@ -88,9 +88,13 @@ const Cars = () => {
               </div>
               <div className="card-body">
                 <div className="card-header">
-                  <h3>{item.fields.make}</h3>
-                  <h5>{item.fields.model}</h5>
-                  <p>{item.fields.year}</p>
+                  <div>
+                    <h3>{item.fields.make}</h3>
+                    <h5>{item.fields.model}</h5>
+                  </div>
+                  <p>
+                    <b>{item.fields.year}</b>
+                  </p>
                 </div>
                 <div className="car-specifications">
                   <div className="card-flex">
@@ -109,14 +113,7 @@ const Cars = () => {
                 <p>Mileage: {item.fields.mileage}</p>
                 <p>VIN: {item.fields.vin}</p>
                 <div className="card-footer">
-                  <Link
-                    to={`/cars/${encodeURIComponent(
-                      item.fields.make.toLowerCase()
-                    )}-${encodeURIComponent(item.fields.model.toLowerCase())}`}
-                    className="btn-primary"
-                  >
-                    Details
-                  </Link>
+                  <button className="btn-primary">Details</button>
                   <h3 className="price">${item.fields.price}</h3>
                 </div>
                 <div className="sale">{item.fields.salePrice}</div>

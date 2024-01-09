@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -12,7 +12,6 @@ import CarsList from "./CarsList";
 import Home from "../routes/Home";
 import About from "../routes/About";
 
-import CarDetails from "../routes/CarDetails";
 import Favourites from "./Favourites";
 
 const Layout = () => {
@@ -25,7 +24,6 @@ const Layout = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cars" element={<CarsList />} />
-          <Route path="/cars/*" element={<CarDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="/sell-car" element={<SellCar />} />
           <Route path="/favourites" element={<Favourites />} />
