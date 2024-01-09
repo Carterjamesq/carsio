@@ -553,19 +553,6 @@ footer {
   }
 }
 
-// Weather
-.weather {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-
-  .weahter-item {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-  }
-}
-
 // Responsivness
 @media (max-width: 768px) {
   .car-details {
