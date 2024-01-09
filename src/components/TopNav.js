@@ -1,5 +1,7 @@
 import React from "react";
 import Currency from "./Currency";
+import Weather from "./Weather";
+
 import Notifications from "./Notifications";
 import { CiHeart } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
@@ -11,6 +13,7 @@ const TopNav = () => {
     <div className="top-nav">
       <div className="container">
         <Currency />
+        <Weather />
         <div className="top-nav_column">
           <Notifications />
           <Link to="/favourites">

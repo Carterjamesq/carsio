@@ -1,63 +1,54 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+import { TiWeatherCloudy } from "react-icons/ti";
+import { RiCelsiusFill } from "react-icons/ri";
 
 const Weather = () => {
-  const [weatherData, setWeatherData] = useState(null);
-  const [error, setError] = useState(null);
-  const [latitude, setLatitude] = useState(null);
-  const [longitude, setLongitude] = useState(null);
-  const apiKey = "d7ad1298602330b729c20e3bde2707d2";
+  const [latitude, setLatitude] = useState(0);
+  const [longitude, setLongitude] = useState(0);
+  const [weather, setWeather] = useState("");
+  const [temperature, setTemperature] = useState(0);
+  // const [cityName, setCityName] = useState("");
 
   useEffect(() => {
-    const fetchWeatherData = async () => {
-      if (latitude && longitude) {
-        try {
-          const response = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`
-          );
+    const savePositionToState = (position) => {
+      setLatitude(position.coords.latitude);
+      setLongitude(position.coords.longitude);
 
-          if (response.ok) {
-            const data = await response.json();
-            setWeatherData(data);
-          } else {
-            setError("Failed to fetch weather data");
-          }
-        } catch (error) {
-          setError("Error fetching weather data");
-        }
+      // Fetch weather data here after setting latitude and longitude
+      fetchWeather(position.coords.latitude, position.coords.longitude);
+    };
+
+    const fetchWeather = async (lat, lon) => {
+      try {
+        const res = await axios.get(
+          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=60d505bb48f9c02e8d1f29a621cd125f&units=metric`
+        );
+        setTemperature(Math.round(res.data.main.temp));
+        // setCityName(res.data.name);
+        setWeather(res.data.weather[0].main);
+      } catch (err) {
+        console.error(err);
       }
     };
 
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        setLatitude(position.coords.latitude);
-        setLongitude(position.coords.longitude);
-      },
-      (error) => {
-        setError("Error getting location");
-      }
-    );
-
-    fetchWeatherData();
-  }, [latitude, longitude]);
+    window.navigator.geolocation.getCurrentPosition(savePositionToState);
+  }, []);
 
   return (
     <div>
-      {error ? (
-        <p>{error}</p>
-      ) : (
-        <div>
-          {weatherData ? (
-            <div>
-              <h2>Weather Information</h2>
-              <p>Location: {weatherData.name}</p>
-              <p>Temperature: {weatherData.main.temp} Kelvin</p>
-              <p>Weather: {weatherData.weather[0].description}</p>
-            </div>
-          ) : (
-            <p>Loading weather data...</p>
-          )}
+      <div className="weather">
+        {/* <h2>{cityName}</h2> */}
+        <div className="weahter-item">
+          <p>{temperature}</p>
+          <RiCelsiusFill />
         </div>
-      )}
+        <div className="weahter-item">
+          <TiWeatherCloudy />
+          <p>{weather}</p>
+        </div>
+      </div>
     </div>
   );
 };

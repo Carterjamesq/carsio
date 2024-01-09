@@ -2,7 +2,6 @@ import React from "react";
 import Carousel from "../components/CarouselHomePage";
 
 import { Helmet } from "react-helmet";
-import Weather from "../components/Weather";
 
 const Home = () => {
   return (
@@ -14,7 +13,6 @@ const Home = () => {
       </Helmet>
       <h1>Home page</h1>
       <Carousel />
-      <Weather />
     </div>
   );
 };

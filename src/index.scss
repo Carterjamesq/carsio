@@ -85,6 +85,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     .top-nav_column {
       display: flex;
@@ -552,6 +553,19 @@ footer {
   }
 }
 
+// Weather
+.weather {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .weahter-item {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+}
+
 // Responsivness
 @media (max-width: 768px) {
   .car-details {
@@ -570,6 +584,18 @@ footer {
 }
 
 @media (max-width: 568px) {
+  .top-nav {
+    .container {
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5rem 0;
+      margin: 0.5rem 0;
+      padding: 0.5rem 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
   .cars-cards {
     display: block;
 
@@ -590,11 +616,6 @@ footer {
 }
 
 @media (max-width: 464px) {
-  .top-nav {
-    .container {
-      flex-direction: column;
-    }
-  }
   .related-cars {
     ul {
       display: block;
