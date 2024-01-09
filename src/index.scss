@@ -18,6 +18,11 @@ input {
   margin-bottom: 1rem;
 }
 
+select {
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
 ul {
   padding-left: 0;
 
@@ -115,7 +120,7 @@ img {
   text-align: center;
   border-radius: 15px;
   border: 1px solid #dddddd;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
 }
 
 .site-navigation {
@@ -358,6 +363,11 @@ footer {
   }
 }
 
+// Filters
+.filter-form {
+  text-align: end;
+}
+
 // Carslist Widget
 .carslist-widget {
   position: sticky;
@@ -491,12 +501,12 @@ footer {
 @media (max-width: 992px) {
   .site-navigation {
     padding: 1rem 0;
-  }
-  .nav-container {
-    padding: 1rem;
+    .container {
+      padding: 1rem;
 
-    .profile-sell {
-      margin-left: 0;
+      .profile-sell {
+        margin-left: 0 !important;
+      }
     }
   }
   .menu-icon {
@@ -505,9 +515,9 @@ footer {
   }
 
   .nav-elements {
-    position: absolute;
+    position: fixed;
     right: 0;
-    top: 38px;
+    top: 0;
     background-color: #ffffff;
     width: 0px;
     height: calc(100vh - 60px);
