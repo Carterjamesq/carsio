@@ -1,79 +1,5 @@
 export default [
   {
-    id: 1,
-    make: "Toyota",
-    model: "Tundra",
-    year: 2009,
-    vin: "1G4PP5SK7F4584609",
-    color: "Teal",
-    mileage: 470522,
-    price: 39206,
-    fuel_type: "gasoline",
-    transmission: "manual",
-    owner: "Shara Jeffrey",
-    image:
-      "https://cdn-api.toyotacr.com/toyotacr_website/uploads/gallery/d0b1dcdb8321cd296a51cad615dda6921fa3c86e.png",
-    sale: "-15%",
-  },
-  {
-    id: 2,
-    make: "Audi",
-    model: "Q5",
-    year: 2009,
-    vin: "WBAPT73568C772516",
-    color: "Teal",
-    mileage: 342055,
-    price: 6758,
-    fuel_type: "diesel",
-    transmission: "manual",
-    owner: "Merrilee Coultass",
-    image: "https://aspnet.by/PDF/2063/Images/H1H1_1140x520.png",
-  },
-  {
-    id: 3,
-    make: "Chrysler",
-    model: "Concorde",
-    year: 1994,
-    vin: "WBAKE3C54CE723289",
-    color: "Green",
-    mileage: 283652,
-    price: 4663,
-    fuel_type: "electric",
-    transmission: "automatic",
-    owner: "Emili Venners",
-    image: "https://www.2dvornika.com.ua/public/images/cars/chconcorde.jpg",
-  },
-  {
-    id: 4,
-    make: "Buick",
-    model: "Century",
-    year: 1995,
-    vin: "JTEBU4BF3CK512331",
-    color: "Green",
-    mileage: 242253,
-    price: 8016,
-    fuel_type: "gasoline",
-    transmission: "automatic",
-    owner: "Onida Laville",
-    image:
-      "https://www.cars.com/i/large/in/v2/stock_photos/68cefafa-b179-4987-9a3e-aedcaaa704b1/e1ff17b6-b4cb-40a8-8c03-4103c1748b62.png",
-  },
-  {
-    id: 5,
-    make: "Toyota",
-    model: "Prius",
-    year: 2004,
-    vin: "2FMGK5BC1CB762066",
-    color: "Goldenrod",
-    mileage: 266025,
-    price: 7382,
-    fuel_type: "diesel",
-    transmission: "automatic",
-    owner: "Zachery Borth",
-    image:
-      "https://www.motortrend.com/uploads/sites/10/2015/11/2015-toyota-prius-hybrid-three-hatchback-angular-front.png?fit=around%7C875:492",
-  },
-  {
     id: 6,
     make: "Isuzu",
     model: "i-Series",
@@ -88,6 +14,7 @@ export default [
     image:
       "https://s1.cdn.autoevolution.com/images/gallery/ISUZUICrewCab-3292_1.jpg",
     sale: "-15%",
+    category: "SUV",
   },
   {
     id: 7,
@@ -103,6 +30,7 @@ export default [
     owner: "Joyann Furby",
     image:
       "https://www.mitsubishi-motors.co.th/content/dam/mitsubishi-motors/images/site-images/discover/heritage/carousel/ExploreChariot_1.jpg?width=2160&auto=webp&quality=70",
+    category: "Minivan",
   },
   {
     id: 8,
@@ -118,6 +46,7 @@ export default [
     owner: "Angelia Gribbins",
     image: "https://www.2dvornika.com.ua/public/images/cars/tyar4.jpg",
     sale: "-15%",
+    category: "Compact Car",
   },
   {
     id: 9,
@@ -133,6 +62,7 @@ export default [
     owner: "Prent Barti",
     image:
       "https://www.motortrend.com/uploads/sites/10/2019/05/2020-acura-rdx-suv-angular-front.png",
+    category: "Hatchback",
   },
   {
     id: 10,
@@ -148,6 +78,7 @@ export default [
     owner: "Diego Biernat",
     image:
       "https://www.motortrend.com/uploads/sites/10/2017/11/2007-chevrolet-suburban-lt1-1500-2wd-suv-angular-front.png",
+    category: "Hatchback",
   },
   {
     id: 11,
