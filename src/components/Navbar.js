@@ -23,7 +23,7 @@ const ResNavbar = () => {
   useEffect(() => {
     const handleOutsideClick = (event) => {
       // Check if the clicked element is outside the mobile menu
-      if (showNavbar && !event.target.closest(".nav-container")) {
+      if (showNavbar && !event.target.closest(".container")) {
         setShowNavbar(false);
       }
     };

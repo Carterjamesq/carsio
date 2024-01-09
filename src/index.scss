@@ -33,7 +33,7 @@ img {
   max-width: 100%;
 }
 .container {
-  max-width: 960px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -488,6 +488,9 @@ footer {
 }
 
 @media (max-width: 992px) {
+  .site-navigation {
+    padding: 1rem 0;
+  }
   .nav-container {
     padding: 1rem;
 
@@ -587,6 +590,11 @@ footer {
 }
 
 @media (max-width: 464px) {
+  .top-nav {
+    .container {
+      flex-direction: column;
+    }
+  }
   .related-cars {
     ul {
       display: block;

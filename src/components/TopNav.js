@@ -18,7 +18,7 @@ const TopNav = () => {
           </Link>
           <Link to="/profile">
             <CgProfile />
-            Profile
+            Login
           </Link>
         </div>
       </div>
