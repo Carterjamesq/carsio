@@ -84,6 +84,19 @@ img {
 }
 
 // Navigation
+.new-used-container {
+  display: flex;
+  gap: 0.5rem;
+
+  a {
+    text-decoration: underline;
+    transition: 0.2s ease-in-out all;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
 .top-nav {
   background-color: black;
   color: white;
@@ -216,7 +229,7 @@ img {
 }
 
 .nav-elements ul a {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   color: #2f234f;
   text-decoration: none;
@@ -382,19 +395,46 @@ footer {
 }
 
 // Categories Home
-.categories-home {
-  ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    position: relative;
 
-    li {
-      img {
-        height: 240px;
-        object-fit: contain;
-      }
-    }
+.categories-home {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  img {
+    height: 100%;
+    object-fit: contain;
   }
+}
+
+.mansory-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+  column-gap: 1rem;
+  row-gap: 0rem;
+}
+
+.mansory-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgb(217, 217, 217);
+}
+
+.big-item {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.category-title {
+  background-color: #f0f0f0;
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
 }
 
 // Filters
@@ -537,6 +577,11 @@ footer {
     padding: 1rem 0;
     .container {
       padding: 1rem;
+      .nav-items {
+        .nav-item {
+          width: 100%;
+        }
+      }
 
       .profile-sell {
         margin-left: 0 !important;
@@ -558,7 +603,6 @@ footer {
     transition: all 0.1s ease-in;
     overflow: hidden;
     z-index: 9999;
-
     .nav-items {
       .nav-item {
         padding: 1.5rem 8rem;
@@ -577,7 +621,7 @@ footer {
   }
 
   .nav-elements.active {
-    width: auto;
+    width: 300px;
     height: 100vh;
   }
 
@@ -598,6 +642,14 @@ footer {
 }
 
 // Responsivness
+@media (max-width: 1092px) {
+  .categories-home {
+    .mansory-grid {
+      column-gap: 1rem;
+      row-gap: 1rem;
+    }
+  }
+}
 @media (max-width: 768px) {
   .car-details {
     .car-details-content {

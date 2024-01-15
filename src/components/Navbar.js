@@ -45,11 +45,16 @@ const ResNavbar = () => {
             <img src={Logo} alt="Cars Logo" />
           </Link>
         </div>
+        <div className="new-used-container">
+          <Link to="#!">New Cars</Link>
+          <Link to="#!">Used Cars</Link>
+        </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
           <div className="line"></div>
           <div className="line"></div>
           <div className="line"></div>
         </div>
+
         <div className={`nav-elements  ${showNavbar && "active"}`}>
           <ul className="nav-items">
             <Link className="nav-item" to="/" onClick={handleLinkClick}>

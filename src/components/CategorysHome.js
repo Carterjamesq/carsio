@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import { fetchContent } from "../dataset/carsDB";
 
 const CategorysHome = () => {
@@ -17,19 +16,28 @@ const CategorysHome = () => {
 
     fetchData();
   }, []);
+
   return (
     <div className="categories-home">
-      <h2>Categroies</h2>
-      <ul>
-        {uniqueCategories.slice(0, 4).map((category) => {
+      <h2>Categories</h2>
+      <ul className="mansory-grid">
+        {uniqueCategories.slice(0, 3).map((category, index) => {
           const itemInCategory = content.find(
             (item) => item.fields.category === category
           );
           return (
             itemInCategory && (
-              <li key={itemInCategory.sys.id}>
-                {itemInCategory.fields.category}
-                <img src={itemInCategory.fields.carImage.fields.file.url} />
+              <li
+                key={itemInCategory.sys.id}
+                className={`mansory-item ${index === 0 ? "big-item" : ""}`}
+              >
+                <div className="category-title">
+                  {itemInCategory.fields.category}
+                </div>
+                <img
+                  src={itemInCategory.fields.carImage.fields.file.url}
+                  alt={itemInCategory.fields.category}
+                />
               </li>
             )
           );
