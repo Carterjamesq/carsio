@@ -381,6 +381,22 @@ footer {
   }
 }
 
+// Categories Home
+.categories-home {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+
+    li {
+      img {
+        height: 240px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
 // Filters
 .filter-form {
   text-align: end;

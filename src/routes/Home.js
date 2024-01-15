@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "../components/CarouselHomePage";
 
 import { Helmet } from "react-helmet";
+import CategorysHome from "../components/CategorysHome";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       </Helmet>
       <h1>Home page</h1>
       <Carousel />
+      <CategorysHome />
     </div>
   );
 };

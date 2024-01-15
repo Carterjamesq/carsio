@@ -24,7 +24,6 @@ const Cars = () => {
   }, []);
 
   useEffect(() => {
-    // Apply filter logic here if needed based on selectedFilter
     const sortedArray = sortContent(initialContentRef.current);
     setContent(sortedArray);
   }, [sortingOption, selectedFilter]);

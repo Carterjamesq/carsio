@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import dataslider from "../dataset/cars";
+import { fetchContent } from "../dataset/carsDB";
 
 const responsive = {
   superLargeDesktop: {
@@ -25,13 +25,25 @@ const responsive = {
 };
 
 const CarouselHomePage = (props) => {
+  const [content, setContent] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetchContent();
+      setContent(data);
+    };
+
+    fetchData();
+  }, []);
   return (
     <Carousel infinite={true} responsive={responsive} autoPlaySpeed={1000}>
-      {dataslider.map((data) => (
-        <div key={data.id}>
-          <img src={data.image} alt={data.make} />
+      {content.map((data) => (
+        <div key={data.sys.id}>
+          <img
+            src={data.fields.carImage.fields.file.url}
+            alt={data.fields.make}
+          />
           <p>
-            {data.make} - {data.model}
+            {data.fields.make} - {data.fields.model}
           </p>
         </div>
       ))}
