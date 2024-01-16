@@ -14,6 +14,7 @@ const SellCar = () => {
         <h2>Adding auto</h2>
         <h4>Basic information</h4>
         <p>Specify the characteristics of your car</p>
+        <button className="btn-outline">Add Car</button>
       </div>
     </div>
   );
