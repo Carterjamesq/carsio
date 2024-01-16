@@ -13,6 +13,7 @@ const Home = () => {
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <h1>Home page</h1>
+      <h2>Hello world</h2>
       <Carousel />
       <CategorysHome />
     </div>
