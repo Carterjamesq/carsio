@@ -46,8 +46,8 @@ const ResNavbar = () => {
           </Link>
         </div>
         <div className="new-used-container">
-          <Link to="#!">New Cars</Link>
-          <Link to="#!">Used Cars</Link>
+          <Link to="/new-cars">New Cars</Link>
+          <Link to="/used-cars">Used Cars</Link>
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
           <div className="line"></div>
