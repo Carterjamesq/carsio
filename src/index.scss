@@ -1,12 +1,17 @@
+@import "assets/scss/colors";
+@import "assets/scss//fonts";
+@import "assets/scss/select";
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Work Sans", sans-serif;
-  color: black;
+  font-family: $font-family-main;
+  color: map-get($colors, darkColor);
   padding: 0;
   margin: 0;
+  background-color: map-get($colors, whiteColor);
 }
 
 main {
@@ -31,7 +36,7 @@ ul {
   }
 }
 a {
-  color: green;
+  color: map-get($colors, primaryColor);
   text-decoration: none;
 }
 img {
@@ -48,11 +53,11 @@ img {
 }
 
 .btn-primary {
-  background-color: green;
+  background-color: map-get($colors, primaryColor);
   border: none;
   border-radius: 10px;
   padding: 0.75rem 1rem;
-  color: white;
+  color: map-get($colors, whiteColor);
   cursor: pointer;
   display: inline-flex;
   width: auto;
@@ -66,11 +71,11 @@ img {
   }
 }
 .btn-primary-outline {
-  background-color: white;
-  border: 1px solid green !important;
+  background-color: map-get($colors, whiteColor);
+  border: 1px solid map-get($colors, primaryColor) !important;
   border-radius: 10px;
   padding: 0.75rem 1rem;
-  color: green;
+  color: map-get($colors, primaryColor);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -84,22 +89,10 @@ img {
 }
 
 // Navigation
-.new-used-container {
-  display: flex;
-  gap: 0.5rem;
 
-  a {
-    text-decoration: underline;
-    transition: 0.2s ease-in-out all;
-
-    &:hover {
-      color: #000;
-    }
-  }
-}
 .top-nav {
-  background-color: black;
-  color: white;
+  background-color: map-get($colors, darkColor);
+  color: map-get($colors, whiteColor);
 
   .container {
     display: flex;
@@ -117,7 +110,7 @@ img {
       }
 
       a {
-        color: white;
+        color: map-get($colors, whiteColor);
         display: flex;
         align-items: center;
       }
@@ -133,7 +126,7 @@ img {
 // For Companies
 .for-companies {
   text-align: center;
-  border: 1px solid #dddddd;
+  border: 1px solid map-get($colors, borderLightColor);
   text-align: center;
   padding: 1rem;
   border-radius: 15px;
@@ -143,7 +136,7 @@ img {
 .sell-car {
   text-align: center;
   border-radius: 15px;
-  border: 1px solid #dddddd;
+  border: 1px solid map-get($colors, borderLightColor);
   padding: 0.75rem 1rem;
 }
 
@@ -172,11 +165,11 @@ img {
         display: flex;
         align-items: center;
         padding: 1.5rem 1rem;
-        color: black;
+        color: map-get($colors, darkColor);
 
         &:hover {
-          background-color: green;
-          color: white;
+          background-color: map-get($colors, primaryColor);
+          color: map-get($colors, whiteColor);
         }
 
         svg {
@@ -186,7 +179,7 @@ img {
         }
       }
       .btn-primary {
-        color: white;
+        color: map-get($colors, whiteColor);
         font-size: 13.33px;
       }
     }
@@ -213,7 +206,7 @@ img {
   .line {
     width: 30px;
     height: 1px;
-    background-color: black;
+    background-color: map-get($colors, darkColor);
     margin-bottom: 0.5rem;
   }
 }
@@ -253,8 +246,8 @@ img {
 
 // Footer
 footer {
-  background: #000;
-  color: white;
+  background: map-get($colors, darkColor);
+  color: map-get($colors, whiteColor);
   padding: 2rem 0;
   img {
     height: 60px;
@@ -327,7 +320,7 @@ footer {
       top: 10px;
       height: 30px;
       background-color: rgb(228 134 0);
-      color: white;
+      color: map-get($colors, whiteColor);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -336,7 +329,7 @@ footer {
       border-radius: 100%;
     }
     .price {
-      color: green;
+      color: map-get($colors, primaryColor);
     }
 
     .card-header {
@@ -376,7 +369,7 @@ footer {
       gap: 0.5rem;
 
       p {
-        background-color: rgb(211, 211, 211);
+        background-color: map-get($colors, cardTagsColor);
         padding: 0.35rem;
         font-size: 0.75rem;
         margin: 0;
@@ -395,6 +388,40 @@ footer {
 }
 
 // Categories Home
+.header-home {
+  border: 1px solid map-get($colors, borderLightColor);
+  border-radius: 20px;
+  padding: 2rem;
+  overflow: hidden;
+  position: relative;
+
+  .header-head {
+    width: 50%;
+  }
+
+  .car-header-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    // img {
+    //   height: 420px;
+    // }
+  }
+
+  .form-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.75rem;
+      width: 100%;
+    }
+  }
+}
 
 .categories-home {
   width: 100%;
@@ -527,7 +554,7 @@ footer {
 // Favourites
 .favourites {
   border-radius: 15px;
-  border: 1px solid #dddddd;
+  border: 1px solid map-get($colors, borderLightColor);
   text-align: center;
   padding: 1rem;
 }
@@ -539,7 +566,7 @@ footer {
   gap: 1rem;
 
   p:nth-child(odd) {
-    color: green;
+    color: map-get($colors, lightOrange);
     font-weight: bold;
   }
   .currency {

@@ -19,7 +19,7 @@ const TopNav = () => {
           </Link>
           <Link to="/profile">
             <CgProfile />
-            Login
+            Увійти
           </Link>
         </div>
       </div>

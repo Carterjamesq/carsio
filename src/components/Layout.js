@@ -5,7 +5,6 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import UserProfile from "./UserProfile";
 import TopNav from "./TopNav";
-import ForCompanies from "./ForCompanies";
 import SellCar from "./SellCar";
 import CarsList from "./CarsList";
 
@@ -31,7 +30,6 @@ const Layout = () => {
           <Route path="/about" element={<About />} />
           <Route path="/sell-car" element={<SellCar />} />
           <Route path="/favourites" element={<Favourites />} />
-          <Route path="/for-companies" element={<ForCompanies />} />
           <Route path="/profile" element={<UserProfile />} />
         </Routes>
       </main>

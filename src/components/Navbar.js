@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 
 import Logo from "../assets/Logo.svg";
 
-import { IoCarSportOutline } from "react-icons/io5";
-import { IoPeopleOutline } from "react-icons/io5";
-import { BsHouse } from "react-icons/bs";
 import { IoIosAddCircle } from "react-icons/io";
 import { IoInformationCircleOutline } from "react-icons/io5";
 
@@ -45,10 +42,7 @@ const ResNavbar = () => {
             <img src={Logo} alt="Cars Logo" />
           </Link>
         </div>
-        <div className="new-used-container">
-          <Link to="/new-cars">New Cars</Link>
-          <Link to="/used-cars">Used Cars</Link>
-        </div>
+
         <div className="menu-icon" onClick={handleShowNavbar}>
           <div className="line"></div>
           <div className="line"></div>
@@ -57,30 +51,37 @@ const ResNavbar = () => {
 
         <div className={`nav-elements  ${showNavbar && "active"}`}>
           <ul className="nav-items">
-            <Link className="nav-item" to="/" onClick={handleLinkClick}>
-              <BsHouse />
+            {/* <Link className="nav-item" to="/" onClick={handleLinkClick}>
               Home
-            </Link>
+            </Link> */}
             <Link className="nav-item" to="/cars" onClick={handleLinkClick}>
-              <IoCarSportOutline />
-              Cars
+              Всі авто в продажі
+            </Link>
+            <Link className="nav-item" to="/new-cars" onClick={handleLinkClick}>
+              Нові авто
+            </Link>
+            <Link
+              className="nav-item"
+              to="/used-cars"
+              onClick={handleLinkClick}
+            >
+              Вживані авто
             </Link>
             <Link className="nav-item" to="/about" onClick={handleLinkClick}>
-              <IoPeopleOutline />
-              About
+              Про нас
             </Link>
             <div className="profile-sell">
-              <Link className="px" to="for-companies" onClick={handleLinkClick}>
-                <IoInformationCircleOutline />
+              {/* <Link className="px" to="for-companies" onClick={handleLinkClick}>
                 For companies
-              </Link>
+              </Link> */}
+
               <Link
                 className="btn-primary sell-car"
                 to="/sell-car"
                 onClick={handleLinkClick}
               >
                 <IoIosAddCircle />
-                Sell Car
+                Продати авто
               </Link>
             </div>
           </ul>
