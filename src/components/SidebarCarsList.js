@@ -18,7 +18,7 @@ const SidebarCarsList = () => {
   return (
     <div className="carslist-widget">
       <div className="newest-cars">
-        <h2>Newest cars</h2>
+        <h2>Нові авто</h2>
         {content.map &&
           content.slice(0, 2).map((widget) => (
             <div className="car-box" key={widget.sys.id}>
@@ -32,14 +32,14 @@ const SidebarCarsList = () => {
                 <p>{widget.fields.year}</p>
               </div>
               <div className="widget-card-body">
-                <Link className="btn-primary">Details</Link>
+                <Link className="btn-primary">Детальніше</Link>
                 <h3>${widget.fields.price}</h3>
               </div>
             </div>
           ))}
       </div>
       <div className="top-cars">
-        <h2>Top cars</h2>
+        <h2>ТОП переглядів</h2>
         {content &&
           content.slice(0, 2).map((widget) => (
             <div className="car-box" key={widget.sys.id}>
@@ -53,7 +53,7 @@ const SidebarCarsList = () => {
                 <p>{widget.fields.year}</p>
               </div>
               <div className="widget-card-body">
-                <Link className="btn-primary">Details</Link>
+                <Link className="btn-primary">Детальніше</Link>
                 <h3>${widget.fields.price}</h3>
               </div>
             </div>

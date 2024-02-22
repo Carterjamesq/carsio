@@ -22,8 +22,8 @@ const NewCars = () => {
     fetchData();
   }, []);
   return (
-    <div>
-      <h1>New Cars</h1>
+    <div className="new-cars">
+      <h1>Нові авто</h1>
       <ul>
         {content.map((item) => (
           <li key={item.sys.id}>

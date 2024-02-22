@@ -7,7 +7,7 @@ const Footer = () => {
   const date = Date.now();
 
   return (
-    <footer className="">
+    <footer className="site-footer">
       <div className="container">
         <div className="brand">
           <Link to="/">

@@ -7,7 +7,7 @@ const About = () => {
     <div>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>About - Cars io</title>
+        <title>Про нас - Carsio</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <CarouselAboutPage />

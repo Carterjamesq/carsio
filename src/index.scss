@@ -42,6 +42,9 @@ a {
 img {
   max-width: 100%;
 }
+svg {
+  color: map-get($colors, lightOrange);
+}
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -89,7 +92,6 @@ img {
 }
 
 // Navigation
-
 .top-nav {
   background-color: map-get($colors, darkColor);
   color: map-get($colors, whiteColor);
@@ -122,24 +124,6 @@ img {
     }
   }
 }
-
-// For Companies
-.for-companies {
-  text-align: center;
-  border: 1px solid map-get($colors, borderLightColor);
-  text-align: center;
-  padding: 1rem;
-  border-radius: 15px;
-}
-
-// Sell Car
-.sell-car {
-  text-align: center;
-  border-radius: 15px;
-  border: 1px solid map-get($colors, borderLightColor);
-  padding: 0.75rem 1rem;
-}
-
 .site-navigation {
   margin-bottom: 5rem;
   .container {
@@ -182,6 +166,12 @@ img {
         color: map-get($colors, whiteColor);
         font-size: 13.33px;
       }
+      .active {
+        background-color: map-get($colors, primaryColor);
+        color: map-get($colors, whiteColor);
+        border: none;
+        text-decoration: none;
+      }
     }
     .profile-sell {
       display: flex;
@@ -193,6 +183,23 @@ img {
       }
     }
   }
+}
+
+// For Companies
+.for-companies {
+  text-align: center;
+  border: 1px solid map-get($colors, borderLightColor);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+// Sell Car
+.sell-car {
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid map-get($colors, borderLightColor);
+  padding: 0.75rem 1rem;
 }
 
 .navbar {
@@ -234,16 +241,6 @@ img {
   position: relative;
 }
 
-.nav-elements ul a.active::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #574c4c;
-}
-
 // Footer
 footer {
   background: map-get($colors, darkColor);
@@ -255,6 +252,12 @@ footer {
   .copyrights {
     display: flex;
     gap: 0.5rem;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
   }
 }
 

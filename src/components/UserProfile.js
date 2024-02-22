@@ -9,7 +9,7 @@ const UserProfile = () => {
         <title>Carsio - Profile</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
-      <h1>User Profile</h1>
+      <h1>Авторизуйтесь для доступу</h1>
     </div>
   );
 };

@@ -9,7 +9,7 @@ const CarsList = () => {
     <div className="cars-list">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Carslist - Cars io</title>
+        <title>Авто в навності - Cars io</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <SidebarCarsList />

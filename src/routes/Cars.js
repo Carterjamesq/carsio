@@ -67,12 +67,12 @@ const Cars = () => {
     <div>
       <div className="filter-form">
         <select value={sortingOption} onChange={handleSortChange}>
-          <option value="">Please Select Sorting</option>
-          <option value="A-Z">A-Z</option>
-          <option value="Newest">From New to Old</option>
-          <option value="Oldest">From Old to New</option>
-          <option value="PriceHighToLow">Price High to Low</option>
-          <option value="PriceLowToHigh">Price Low to High</option>
+          <option value="">Сортування</option>
+          <option value="A-Z">А-Я</option>
+          <option value="Newest">Від нових до старих</option>
+          <option value="Oldest">Від старих до нових</option>
+          <option value="PriceHighToLow">Ціна - від найвищої</option>
+          <option value="PriceLowToHigh">Ціна - від найдешевшої</option>
         </select>
       </div>
       <div className="cars">
@@ -112,7 +112,7 @@ const Cars = () => {
                 <p>Mileage: {item.fields.mileage}</p>
                 <p>VIN: {item.fields.vin}</p>
                 <div className="card-footer">
-                  <button className="btn-primary">Details</button>
+                  <button className="btn-primary">Детальніше</button>
                   <h3 className="price">${item.fields.price}</h3>
                 </div>
                 <div className="sale">{item.fields.salePrice}</div>

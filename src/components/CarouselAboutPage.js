@@ -36,7 +36,7 @@ const CarouselAboutPage = () => {
   }, []);
   return (
     <div>
-      <h1>About</h1>
+      <h1>Про нас</h1>
       <Carousel infinite={true} responsive={responsive} autoPlaySpeed={1000}>
         {content.map((data) => (
           <div key={data.sys.id}>

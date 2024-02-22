@@ -19,7 +19,7 @@ const CategorysHome = () => {
 
   return (
     <div className="categories-home">
-      <h2>Categories</h2>
+      <h2>Популярні категорії</h2>
       <ul className="mansory-grid">
         {uniqueCategories.slice(0, 3).map((category, index) => {
           const itemInCategory = content.find(

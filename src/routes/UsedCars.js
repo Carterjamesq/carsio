@@ -24,7 +24,7 @@ const UsedCars = () => {
 
   return (
     <div>
-      <h1>Used Cars</h1>
+      <h1>Вживані авто</h1>
       <ul>
         {content.map((item) => (
           <li key={item.sys.id}>

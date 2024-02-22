@@ -8,20 +8,16 @@ const Favourites = () => {
     <div className="favourites">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Carsio - Favourites</title>
+        <title>Carsio - Додані</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
-      <h1>Favourites</h1>
+      <h1>Додані авто</h1>
       <div>
-        <h2>You have not yet added any ad to your favorites</h2>
-        <p>
-          Save interesting offers to track prices and quickly find what you
-          like.
-        </p>
+        <h2>Ви ще не додали жодного авто до вибраного</h2>
       </div>
       <Link className="btn-primary" to="/cars">
         <IoCarSportOutline />
-        Cars
+        Переглянути авто
       </Link>
     </div>
   );

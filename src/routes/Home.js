@@ -11,7 +11,7 @@ const Home = () => {
     <div>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Home - Cars io</title>
+        <title>Головна - Cars io</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <div className="header-home">
@@ -58,7 +58,7 @@ const Home = () => {
           <img src={CarImage} />
         </div>
       </div>
-      <Carousel />
+      {/* <Carousel /> */}
       <CategorysHome />
     </div>
   );
