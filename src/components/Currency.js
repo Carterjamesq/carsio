@@ -27,13 +27,17 @@ const CurrencyComponent = () => {
   }, []);
 
   return (
-    <div className="currency-wrapper">
-      {currencyData.map((currency) => (
-        <div className="currency" key={currency.r030}>
-          <p>{currency.cc}</p>
-          <p>{parseFloat(currency.rate).toFixed(2)}</p>
-        </div>
-      ))}
+    <div className="currency">
+      <p>Курс валют </p>
+      <span>|</span>
+      <div className="currency-wrapper">
+        {currencyData.map((currency) => (
+          <div className="currency" key={currency.r030}>
+            <p>{currency.cc}</p>
+            <p>{parseFloat(currency.rate).toFixed(2)}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

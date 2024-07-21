@@ -554,6 +554,17 @@ footer {
 }
 
 // Currency
+.currency {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  p {
+    font-size: 0.75rem;
+  }
+  span {
+    margin: 0 10px !important;
+  }
+}
 .currency-wrapper {
   display: flex;
   align-items: center;
