@@ -109,7 +109,9 @@ const Cars = () => {
                     <p>{item.fields.color}</p>
                   </div>
                 </div>
-                <p>Mileage: {item.fields.mileage}</p>
+                <p>
+                  Кілометраж: <b>{item.fields.mileage}</b> тис. км
+                </p>
                 <p>VIN: {item.fields.vin}</p>
                 <div className="card-footer">
                   <button className="btn-primary">Детальніше</button>

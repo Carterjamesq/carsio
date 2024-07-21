@@ -1,10 +1,12 @@
-import React from "react";
-import Carousel from "../components/CarouselHomePage";
+import React, { useEffect } from "react";
+
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 
 import { Helmet } from "react-helmet";
-import CategorysHome from "../components/CategorysHome";
-
 import CarImage from "../assets/header-main-image.jpg";
+
+import { fetchContent } from "../dataset/carsDB";
 
 const Home = () => {
   return (
@@ -58,8 +60,28 @@ const Home = () => {
           <img src={CarImage} />
         </div>
       </div>
-      {/* <Carousel /> */}
-      <CategorysHome />
+      <section>
+        <div>
+          <h2>Популярні категорії</h2>
+          <Tabs>
+            <TabList>
+              <Tab>Седан</Tab>
+              <Tab>Позашляховик</Tab>
+              <Tab>Електро</Tab>
+            </TabList>
+
+            <TabPanel>
+              <h2>Content 1</h2>
+            </TabPanel>
+            <TabPanel>
+              <h2>Content 2</h2>
+            </TabPanel>
+            <TabPanel>
+              <h2>Content 3</h2>
+            </TabPanel>
+          </Tabs>
+        </div>
+      </section>
     </div>
   );
 };

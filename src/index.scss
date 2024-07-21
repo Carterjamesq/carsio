@@ -322,7 +322,7 @@ footer {
       right: 10px;
       top: 10px;
       height: 30px;
-      background-color: rgb(228 134 0);
+      background-color: map-get($colors, secondaryColor);
       color: map-get($colors, whiteColor);
       display: flex;
       justify-content: center;
@@ -364,6 +364,8 @@ footer {
 
       h3 {
         margin: 0;
+        font-size: 1.25rem;
+        color: map-get($colors, lightOrange);
       }
     }
     .car-specifications {
@@ -423,17 +425,6 @@ footer {
       font-size: 0.75rem;
       width: 100%;
     }
-  }
-}
-
-.categories-home {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-
-  img {
-    height: 100%;
-    object-fit: contain;
   }
 }
 
@@ -671,14 +662,7 @@ footer {
 }
 
 // Responsivness
-@media (max-width: 1092px) {
-  .categories-home {
-    .mansory-grid {
-      column-gap: 1rem;
-      row-gap: 1rem;
-    }
-  }
-}
+
 @media (max-width: 768px) {
   .car-details {
     .car-details-content {

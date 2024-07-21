@@ -12,8 +12,8 @@ const SellCar = () => {
       <h1>Продаж авто онлайн</h1>
       <div className="sell-car-wrapper">
         <h2>Продати авто</h2>
-        <h4>Basic information</h4>
-        <p>Specify the characteristics of your car</p>
+        <h4>Додайте інформацію</h4>
+        <p>Додайте параметри вашого авто</p>
       </div>
     </div>
   );
