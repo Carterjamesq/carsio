@@ -60,7 +60,7 @@ const Home = () => {
           <img src={CarImage} />
         </div>
       </div>
-      <section>
+      <div>
         <div>
           <h2>Популярні категорії</h2>
           <Tabs>
@@ -81,7 +81,7 @@ const Home = () => {
             </TabPanel>
           </Tabs>
         </div>
-      </section>
+      </div>
     </div>
   );
 };
